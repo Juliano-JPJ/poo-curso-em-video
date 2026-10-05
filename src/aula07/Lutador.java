@@ -2,14 +2,15 @@ package aula07;
 
 public class Lutador {
     //Atributos
-    private String nome, nacionalidade, categoria;
+    private String nome, nacionalidade, categoria, academia;
     private int idade, vitorias, derrotas, empates;
     private float altura, peso;
 
     //Métodos especiais
-    public Lutador(String nome, String nacionalidade, int idade, float altura, float peso, int vitorias, int derrotas, int empates) {
+    public Lutador(String nome, String nacionalidade, String academia, int idade, float altura, float peso, int vitorias, int derrotas, int empates) {
         this.nome = nome;
         this.nacionalidade = nacionalidade;
+        this.academia = academia;
         this.idade = idade;
         this.altura = altura;
         this.setPeso(peso);
@@ -32,6 +33,14 @@ public class Lutador {
 
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
+    }
+
+    public String getAcademia() {
+        return academia;
+    }
+
+    public void setAcademia(String academia) {
+        this.academia = academia;
     }
 
     public String getCategoria() {
@@ -103,15 +112,10 @@ public class Lutador {
 
     //Métodos públicos
     public void apresentar() {
-        System.out.println("------------------------------------------------------------------------");
-        System.out.println("Ladies and gentlemen... WE... ARE.. LIVE! This is the mai event of the evening. " +
-                "This is the moment you've all been waiting for. Live from São Paulo, Brazil.");
-        System.out.println("IIIIIIIIIIIIIIIIT'S TIIIMEEE!");
-        System.out.println("And now... introducing first, fighting out of the blue corner!");
         System.out.println(this.getIdade() + " years old, standing " + this.getAltura() + " meters tall, weighing in at " + this.getPeso() + " kilograms!");
         System.out.println("With a professional record of " + this.getVitorias() + " wins, " + this.getDerrotas() +
                 " losses, and " + this.getEmpates() + " draws!");
-        System.out.println("Fighting out of " + this.getNacionalidade() + " and representing ATT");
+        System.out.println("Fighting out of " + this.getNacionalidade() + " and representing " + this.getAcademia());
         System.out.println("Please welcome... " + this.getNome());
     }
 
