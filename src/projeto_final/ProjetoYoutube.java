@@ -11,7 +11,16 @@ public class ProjetoYoutube {
         inscrito[0] = new Inscrito("Pedro", 22, "Masculino", "Pedrinho2322");
         inscrito[1] = new Inscrito("Vinicius", 18, "Masculino", "SaboneteCheiroso123");
 
-        System.out.println(video[0].toString());
-        System.out.println(inscrito[0].toString());
+//        System.out.println(video[0].toString());
+//        System.out.println(inscrito[0].toString());
+
+        Visualizacao visualizacao[] = new Visualizacao[5];
+        visualizacao[0] = new Visualizacao(inscrito[0], video[0]);
+        visualizacao[0].avaliar();
+        System.out.println(visualizacao[0].toString());
+
+        visualizacao[1] = new Visualizacao(inscrito[0], video[1]);
+        visualizacao[1].avaliar(87.0f);
+        System.out.println(visualizacao[1].toString());
     }
 }

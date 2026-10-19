@@ -28,7 +28,9 @@ public class Video implements AcoesVideo{
     }
 
     public void setAvaliacao(int avaliacao) {
-        this.avaliacao = avaliacao;
+        int novaAvaliacao;
+        novaAvaliacao = (int) ((this.avaliacao + avaliacao)/this.views);
+        this.avaliacao = novaAvaliacao;
     }
 
     public int getViews() {
